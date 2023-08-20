@@ -16,7 +16,6 @@ INNER JOIN order_status os on oh.status_id = os.status_id
 WHERE os.status_id = 5
 ORDER BY b.title ASC;
 
-Mostrar la cantidad de libros y el titulo del libro que se han entregado satisfactoriamente
 --- ITEMS 8 ---
 SELECT COUNT(b.title) AS CANTIDAD_LIBROS,b.title AS TITULO, os.status_value AS ESTATUS
 FROM book b 

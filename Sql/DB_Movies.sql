@@ -1,7 +1,3 @@
---- *********************************************************************** ---
-						--- MOVIES DB --
---- *********************************************************************** ---
-
 --- ITEMS 1 ---
 SELECT m.title, CASE WHEN ml.language_id IS NULL THEN 'NO' ELSE 'YES' END SPANISH  
 FROM movie m 
@@ -80,7 +76,6 @@ LEFT JOIN movie_languages ml on m.movie_id = ml.movie_id
 INNER JOIN [language] l on ml.language_id = l.language_id 
 GROUP BY m.title
 ORDER BY m.title ASC;
-
 
 --- ITEMS 10 ---
 SELECT TOP 8 COUNT(k.keyword_id) AS Cantidad_Utilizadas, k.keyword_name 
