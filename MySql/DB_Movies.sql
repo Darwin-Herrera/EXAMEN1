@@ -1,7 +1,7 @@
 --- ITEMS 1 ---
 SELECT m.title, 
        CASE WHEN ml.language_id IS NULL THEN 'NO' ELSE 'YES' END AS SPANISH  
-FROM movie m 
+FROM movie m
 LEFT JOIN movie_languages ml ON m.movie_id = ml.movie_id  
 AND ml.language_id IN (24580, 24582)
 WHERE m.movie_id IS NOT NULL 
