@@ -8,7 +8,7 @@ ORDER BY b.title ASC;
 
 --- ITEMS 5 ---
 SELECT b.title AS TITULO, os.status_value AS ESTATUS
-FROM book b 
+FROM book b
 LEFT JOIN order_line ol on b.book_id = ol.line_id 
 LEFT JOIN cust_order co on ol.order_id = co.order_id 
 LEFT JOIN order_history oh on ol.order_id = oh.order_id 
